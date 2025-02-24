@@ -197,6 +197,7 @@ public final void countAvailableBooks() {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblNotifications = new rojerusan.RSTableMetro();
+        rSMaterialButtonRectangle3 = new rojerusan.RSMaterialButtonRectangle();
         jPanel30 = new javax.swing.JPanel();
         jPanel31 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
@@ -819,15 +820,34 @@ public final void countAvailableBooks() {
         });
         jScrollPane1.setViewportView(tblNotifications);
 
+        rSMaterialButtonRectangle3.setBackground(new java.awt.Color(50, 61, 46));
+        rSMaterialButtonRectangle3.setText("make as read");
+        rSMaterialButtonRectangle3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        rSMaterialButtonRectangle3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rSMaterialButtonRectangle3MouseClicked(evt);
+            }
+        });
+        rSMaterialButtonRectangle3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rSMaterialButtonRectangle3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1020, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1020, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(470, 470, 470)
+                        .addComponent(rSMaterialButtonRectangle3, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
@@ -836,8 +856,10 @@ public final void countAvailableBooks() {
                 .addGap(21, 21, 21)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rSMaterialButtonRectangle3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         jPanel30.setBackground(new java.awt.Color(255, 255, 255));
@@ -1009,7 +1031,8 @@ public final void countAvailableBooks() {
     }//GEN-LAST:event_txtreservatonMouseEntered
 
     private void tblNotificationsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblNotificationsMouseClicked
-
+        
+        
     }//GEN-LAST:event_tblNotificationsMouseClicked
 
     private void rSMaterialButtonRectangle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle2ActionPerformed
@@ -1126,6 +1149,45 @@ public final void countAvailableBooks() {
        txthistory.setForeground(new Color(255,255,255));
     }//GEN-LAST:event_txthistoryMouseExited
 
+    private void rSMaterialButtonRectangle3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle3ActionPerformed
+     
+    int selectedRow = tblNotifications.getSelectedRow();
+
+    if (selectedRow == -1) {
+        JOptionPane.showMessageDialog(this, "Please select a notification to mark as read.", "No Selection", JOptionPane.WARNING_MESSAGE);
+        return;
+    }
+
+    // Get the selected message from the table
+    String selectedMessage = tblNotifications.getValueAt(selectedRow, 0).toString();
+    
+    String query = "UPDATE Notifications SET status = 'Read' WHERE message = ? AND username = ?";
+
+    try (PreparedStatement pst2 = con.prepareStatement(query)) {
+        pst2.setString(1, selectedMessage);
+        pst2.setString(2, this.memberName);
+
+        int updatedRows = pst2.executeUpdate();
+        
+        if (updatedRows > 0) {
+            JOptionPane.showMessageDialog(this, "Notification marked as read.", "Success", JOptionPane.INFORMATION_MESSAGE);
+
+            // Refresh notifications
+            fetchUnreadNotifications();
+        } else {
+            JOptionPane.showMessageDialog(this, "Error: Could not update notification.", "Update Failed", JOptionPane.ERROR_MESSAGE);
+        }
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage(), "SQL Error", JOptionPane.ERROR_MESSAGE);
+    }
+
+
+    }//GEN-LAST:event_rSMaterialButtonRectangle3ActionPerformed
+
+    private void rSMaterialButtonRectangle3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rSMaterialButtonRectangle3MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1150,11 +1212,8 @@ public final void countAvailableBooks() {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1166,14 +1225,8 @@ public final void countAvailableBooks() {
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
-    private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel26;
-    private javax.swing.JPanel jPanel27;
-    private javax.swing.JPanel jPanel28;
-    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel31;
     private javax.swing.JPanel jPanel4;
@@ -1188,6 +1241,7 @@ public final void countAvailableBooks() {
     private javax.swing.JPanel pnlreserve;
     private javax.swing.JPanel pnlreturn;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle2;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle3;
     private rojerusan.RSTableMetro tblNotifications;
     private javax.swing.JLabel txtAvailableBooks;
     private javax.swing.JLabel txtBorrowedBooks;
