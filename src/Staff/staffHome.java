@@ -408,19 +408,19 @@ public final void countTotalReservations() {
         jLabel7 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
+        pnlhm = new javax.swing.JPanel();
+        txthome = new javax.swing.JLabel();
+        pnlbook = new javax.swing.JPanel();
+        txtbook = new javax.swing.JLabel();
         rSMaterialButtonRectangle2 = new rojerusan.RSMaterialButtonRectangle();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
-        jLabel20 = new javax.swing.JLabel();
+        pnluser = new javax.swing.JPanel();
+        txtuser = new javax.swing.JLabel();
+        pnlreserve = new javax.swing.JPanel();
+        txtreserve = new javax.swing.JLabel();
+        pnlhistory = new javax.swing.JPanel();
+        txthistory = new javax.swing.JLabel();
+        pnloverdue = new javax.swing.JPanel();
+        txtoverdue = new javax.swing.JLabel();
         pnlhome = new javax.swing.JPanel();
         chartAvailable = new javax.swing.JPanel();
         panelLineChart = new javax.swing.JPanel();
@@ -516,69 +516,81 @@ public final void countTotalReservations() {
         jPanel4.setBackground(new java.awt.Color(50, 61, 46));
         jPanel4.setForeground(new java.awt.Color(50, 61, 46));
 
-        jPanel3.setBackground(new java.awt.Color(50, 61, 46));
+        pnlhm.setBackground(new java.awt.Color(50, 61, 46));
 
-        jLabel14.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 13)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("HOME");
-        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+        txthome.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 13)); // NOI18N
+        txthome.setForeground(new java.awt.Color(255, 255, 255));
+        txthome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txthome.setText("HOME");
+        txthome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel14MouseClicked(evt);
+                txthomeMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txthomeMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txthomeMouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlhmLayout = new javax.swing.GroupLayout(pnlhm);
+        pnlhm.setLayout(pnlhmLayout);
+        pnlhmLayout.setHorizontalGroup(
+            pnlhmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 192, Short.MAX_VALUE)
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
+            .addGroup(pnlhmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlhmLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                    .addComponent(txthome, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                     .addContainerGap()))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlhmLayout.setVerticalGroup(
+            pnlhmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 43, Short.MAX_VALUE)
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
+            .addGroup(pnlhmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlhmLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(txthome, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
-        jPanel5.setBackground(new java.awt.Color(50, 61, 46));
+        pnlbook.setBackground(new java.awt.Color(50, 61, 46));
 
-        jLabel16.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 13)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("BOOKS");
-        jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtbook.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 13)); // NOI18N
+        txtbook.setForeground(new java.awt.Color(255, 255, 255));
+        txtbook.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtbook.setText("BOOKS");
+        txtbook.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel16MouseClicked(evt);
+                txtbookMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txtbookMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtbookMouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlbookLayout = new javax.swing.GroupLayout(pnlbook);
+        pnlbook.setLayout(pnlbookLayout);
+        pnlbookLayout.setHorizontalGroup(
+            pnlbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 192, Short.MAX_VALUE)
-            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel5Layout.createSequentialGroup()
+            .addGroup(pnlbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlbookLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                    .addComponent(txtbook, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                     .addContainerGap()))
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlbookLayout.setVerticalGroup(
+            pnlbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 43, Short.MAX_VALUE)
-            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel5Layout.createSequentialGroup()
+            .addGroup(pnlbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlbookLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(txtbook, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -592,135 +604,159 @@ public final void countTotalReservations() {
             }
         });
 
-        jPanel6.setBackground(new java.awt.Color(50, 61, 46));
+        pnluser.setBackground(new java.awt.Color(50, 61, 46));
 
-        jLabel17.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 13)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("USER");
-        jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtuser.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 13)); // NOI18N
+        txtuser.setForeground(new java.awt.Color(255, 255, 255));
+        txtuser.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtuser.setText("USER");
+        txtuser.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel17MouseClicked(evt);
+                txtuserMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txtuserMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtuserMouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnluserLayout = new javax.swing.GroupLayout(pnluser);
+        pnluser.setLayout(pnluserLayout);
+        pnluserLayout.setHorizontalGroup(
+            pnluserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 192, Short.MAX_VALUE)
-            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel6Layout.createSequentialGroup()
+            .addGroup(pnluserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnluserLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                    .addComponent(txtuser, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                     .addContainerGap()))
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnluserLayout.setVerticalGroup(
+            pnluserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 43, Short.MAX_VALUE)
-            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel6Layout.createSequentialGroup()
+            .addGroup(pnluserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnluserLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(txtuser, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
-        jPanel7.setBackground(new java.awt.Color(50, 61, 46));
+        pnlreserve.setBackground(new java.awt.Color(50, 61, 46));
 
-        jLabel18.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 13)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("RESERVATION");
-        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtreserve.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 13)); // NOI18N
+        txtreserve.setForeground(new java.awt.Color(255, 255, 255));
+        txtreserve.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtreserve.setText("RESERVATION");
+        txtreserve.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel18MouseClicked(evt);
+                txtreserveMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txtreserveMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtreserveMouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlreserveLayout = new javax.swing.GroupLayout(pnlreserve);
+        pnlreserve.setLayout(pnlreserveLayout);
+        pnlreserveLayout.setHorizontalGroup(
+            pnlreserveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 192, Short.MAX_VALUE)
-            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel7Layout.createSequentialGroup()
+            .addGroup(pnlreserveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlreserveLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                    .addComponent(txtreserve, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                     .addContainerGap()))
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlreserveLayout.setVerticalGroup(
+            pnlreserveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 43, Short.MAX_VALUE)
-            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel7Layout.createSequentialGroup()
+            .addGroup(pnlreserveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlreserveLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(txtreserve, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
-        jPanel8.setBackground(new java.awt.Color(50, 61, 46));
+        pnlhistory.setBackground(new java.awt.Color(50, 61, 46));
 
-        jLabel19.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 13)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("HISTORY");
-        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+        txthistory.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 13)); // NOI18N
+        txthistory.setForeground(new java.awt.Color(255, 255, 255));
+        txthistory.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txthistory.setText("HISTORY");
+        txthistory.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel19MouseClicked(evt);
+                txthistoryMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txthistoryMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txthistoryMouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlhistoryLayout = new javax.swing.GroupLayout(pnlhistory);
+        pnlhistory.setLayout(pnlhistoryLayout);
+        pnlhistoryLayout.setHorizontalGroup(
+            pnlhistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 192, Short.MAX_VALUE)
-            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel8Layout.createSequentialGroup()
+            .addGroup(pnlhistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlhistoryLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                    .addComponent(txthistory, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                     .addContainerGap()))
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlhistoryLayout.setVerticalGroup(
+            pnlhistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 43, Short.MAX_VALUE)
-            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel8Layout.createSequentialGroup()
+            .addGroup(pnlhistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlhistoryLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(txthistory, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
-        jPanel9.setBackground(new java.awt.Color(50, 61, 46));
+        pnloverdue.setBackground(new java.awt.Color(50, 61, 46));
 
-        jLabel20.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 13)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("OVERDUE");
-        jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtoverdue.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 13)); // NOI18N
+        txtoverdue.setForeground(new java.awt.Color(255, 255, 255));
+        txtoverdue.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtoverdue.setText("OVERDUE");
+        txtoverdue.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel20MouseClicked(evt);
+                txtoverdueMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txtoverdueMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtoverdueMouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnloverdueLayout = new javax.swing.GroupLayout(pnloverdue);
+        pnloverdue.setLayout(pnloverdueLayout);
+        pnloverdueLayout.setHorizontalGroup(
+            pnloverdueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 192, Short.MAX_VALUE)
-            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel9Layout.createSequentialGroup()
+            .addGroup(pnloverdueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnloverdueLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                    .addComponent(txtoverdue, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                     .addContainerGap()))
         );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnloverdueLayout.setVerticalGroup(
+            pnloverdueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 43, Short.MAX_VALUE)
-            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel9Layout.createSequentialGroup()
+            .addGroup(pnloverdueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnloverdueLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(txtoverdue, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -731,12 +767,12 @@ public final void countTotalReservations() {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(pnlhm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlbook, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnluser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlreserve, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlhistory, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnloverdue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -747,17 +783,17 @@ public final void countTotalReservations() {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(103, 103, 103)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlhm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlbook, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnluser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnloverdue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlreserve, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlhistory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(rSMaterialButtonRectangle2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
@@ -1298,12 +1334,12 @@ public final void countTotalReservations() {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
+    private void txtbookMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtbookMouseClicked
         staffBook Frame = new staffBook();   
         pnlhome.removeAll();
         pnlhome.add(Frame);
         Frame.setVisible(true);
-    }//GEN-LAST:event_jLabel16MouseClicked
+    }//GEN-LAST:event_txtbookMouseClicked
 
     private void rSMaterialButtonRectangle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle2ActionPerformed
         for (java.awt.Window window : java.awt.Window.getWindows()) {
@@ -1312,38 +1348,38 @@ public final void countTotalReservations() {
         new SigninAcc().setVisible(true);
     }//GEN-LAST:event_rSMaterialButtonRectangle2ActionPerformed
 
-    private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
+    private void txtuserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtuserMouseClicked
         
          staffUser Frame = new staffUser();   
         pnlhome.removeAll();
         pnlhome.add(Frame);
         Frame.setVisible(true);
-    }//GEN-LAST:event_jLabel17MouseClicked
+    }//GEN-LAST:event_txtuserMouseClicked
 
-    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+    private void txtreserveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtreserveMouseClicked
          staffReservation Frame = new staffReservation();   
         pnlhome.removeAll();
         pnlhome.add(Frame);
         Frame.setVisible(true);
-    }//GEN-LAST:event_jLabel18MouseClicked
+    }//GEN-LAST:event_txtreserveMouseClicked
 
-    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+    private void txthistoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txthistoryMouseClicked
        
          staffHistory Frame = new staffHistory();   
         pnlhome.removeAll();
         pnlhome.add(Frame);
         Frame.setVisible(true);
         
-    }//GEN-LAST:event_jLabel19MouseClicked
+    }//GEN-LAST:event_txthistoryMouseClicked
 
-    private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
+    private void txtoverdueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtoverdueMouseClicked
            staffOverdue Frame = new staffOverdue();   
         pnlhome.removeAll();
         pnlhome.add(Frame);
         Frame.setVisible(true);
-    }//GEN-LAST:event_jLabel20MouseClicked
+    }//GEN-LAST:event_txtoverdueMouseClicked
 
-    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+    private void txthomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txthomeMouseClicked
         
         pnlhome.removeAll(); 
         pnlhome.revalidate();
@@ -1380,7 +1416,69 @@ public final void countTotalReservations() {
            
            pnlhome.revalidate();
         pnlhome.repaint();
-    }//GEN-LAST:event_jLabel14MouseClicked
+    }//GEN-LAST:event_txthomeMouseClicked
+
+    private void txthomeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txthomeMouseEntered
+         pnlhm.setBackground(new Color(204, 204, 204)); 
+       pnlhome.setForeground(new Color(50,61,46));
+    }//GEN-LAST:event_txthomeMouseEntered
+
+    private void txthomeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txthomeMouseExited
+        pnlhm.setBackground(new Color(50,61,46)); 
+       pnlhome.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_txthomeMouseExited
+
+    private void txtbookMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtbookMouseEntered
+         pnlbook.setBackground(new Color(204, 204, 204)); 
+       txtbook.setForeground(new Color(50,61,46));
+    }//GEN-LAST:event_txtbookMouseEntered
+
+    private void txtbookMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtbookMouseExited
+         pnlbook.setBackground(new Color(50,61,46)); 
+       txtbook.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_txtbookMouseExited
+
+    private void txtuserMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtuserMouseEntered
+         pnluser.setBackground(new Color(204, 204, 204)); 
+       txtuser.setForeground(new Color(50,61,46));
+    }//GEN-LAST:event_txtuserMouseEntered
+
+    private void txtuserMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtuserMouseExited
+          pnluser.setBackground(new Color(50,61,46)); 
+       txtuser.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_txtuserMouseExited
+
+    private void txtoverdueMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtoverdueMouseEntered
+         pnloverdue.setBackground(new Color(204, 204, 204)); 
+       txtoverdue.setForeground(new Color(50,61,46));
+    }//GEN-LAST:event_txtoverdueMouseEntered
+
+    private void txtoverdueMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtoverdueMouseExited
+          pnloverdue.setBackground(new Color(50,61,46)); 
+       txtoverdue.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_txtoverdueMouseExited
+
+    private void txtreserveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtreserveMouseEntered
+          pnlreserve.setBackground(new Color(204, 204, 204)); 
+       txtreserve.setForeground(new Color(50,61,46));
+    }//GEN-LAST:event_txtreserveMouseEntered
+
+    private void txtreserveMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtreserveMouseExited
+        pnlreserve.setBackground(new Color(50,61,46)); 
+       txtreserve.setForeground(new Color(255,255,255));
+
+    }//GEN-LAST:event_txtreserveMouseExited
+
+    private void txthistoryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txthistoryMouseEntered
+         pnlhistory.setBackground(new Color(204, 204, 204)); 
+       txthistory.setForeground(new Color(50,61,46));
+    }//GEN-LAST:event_txthistoryMouseEntered
+
+    private void txthistoryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txthistoryMouseExited
+       pnlhistory.setBackground(new Color(50,61,46)); 
+       txthistory
+               .setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_txthistoryMouseExited
 
     /**
      * @param args the command line arguments
@@ -1405,17 +1503,9 @@ public final void countTotalReservations() {
     private javax.swing.JPanel chartAvailable;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
@@ -1434,27 +1524,23 @@ public final void countTotalReservations() {
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel23;
-    private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
     private javax.swing.JPanel jPanel29;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel31;
     private javax.swing.JPanel jPanel32;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel panelLineChart;
+    private javax.swing.JPanel pnlbook;
+    private javax.swing.JPanel pnlhistory;
+    private javax.swing.JPanel pnlhm;
     private javax.swing.JPanel pnlhome;
+    private javax.swing.JPanel pnloverdue;
+    private javax.swing.JPanel pnlreserve;
+    private javax.swing.JPanel pnluser;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle2;
     private javax.swing.JLabel txtAvailableBooks;
     private javax.swing.JLabel txtLowStockBook;
@@ -1464,5 +1550,11 @@ public final void countTotalReservations() {
     private javax.swing.JLabel txtTotalFine;
     private javax.swing.JLabel txtTotalReservations;
     private javax.swing.JLabel txtTotalUsers;
+    private javax.swing.JLabel txtbook;
+    private javax.swing.JLabel txthistory;
+    private javax.swing.JLabel txthome;
+    private javax.swing.JLabel txtoverdue;
+    private javax.swing.JLabel txtreserve;
+    private javax.swing.JLabel txtuser;
     // End of variables declaration//GEN-END:variables
 }
