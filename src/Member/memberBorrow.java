@@ -96,6 +96,7 @@ public class memberBorrow extends javax.swing.JInternalFrame {
         // Define the column based on the selected filter
         String column = "";
         switch (filter) {
+            case "ID": column = "book_id"; break;
             case "Title": column = "title"; break;
             case "Author": column = "author"; break;
             case "ISBN": column = "isbn"; break;

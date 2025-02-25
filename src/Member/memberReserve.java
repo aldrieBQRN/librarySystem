@@ -396,6 +396,8 @@ public class memberReserve extends javax.swing.JInternalFrame {
     } 
 
     showTable(); // Refresh the table
+    txtBookID.setText("");
+    txtborrowingid.setText(""); jdcReserveDate.setDate(null);
 
 } catch (SQLException ex) {
     Logger.getLogger(memberReserve.class.getName()).log(Level.SEVERE, null, ex);
@@ -422,7 +424,9 @@ public class memberReserve extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtBookIDKeyTyped
 
     private void rSMaterialButtonRectangle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle2ActionPerformed
-        // TODO add your handling code here:
+       txtBookID.setText("");
+    txtborrowingid.setText(""); 
+    jdcReserveDate.setDate(null);
     }//GEN-LAST:event_rSMaterialButtonRectangle2ActionPerformed
 
     private void tblBorrowedBooksMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblBorrowedBooksMouseClicked

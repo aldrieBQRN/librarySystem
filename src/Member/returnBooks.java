@@ -479,6 +479,12 @@ public class returnBooks extends javax.swing.JInternalFrame {
 
         JOptionPane.showMessageDialog(null, "Book return recorded successfully!");
         showTable(); // Refresh table after update
+        txtbid.setText("");
+    txtbookid.setText("");
+    jdcborrow.setDate(null);
+    jdcdue.setDate(null);
+    jdcreturn.setDate(null);
+    txtfine.setText("");
 
     } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(this, "Invalid number format in Borrow ID or Fine!", "Input Error", JOptionPane.ERROR_MESSAGE);
@@ -506,7 +512,12 @@ public class returnBooks extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_rSMaterialButtonRectangle1ActionPerformed
 
     private void rSMaterialButtonRectangle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle2ActionPerformed
-        // TODO add your handling code here:
+        txtbid.setText("");
+    txtbookid.setText("");
+    jdcborrow.setDate(null);
+    jdcdue.setDate(null);
+    jdcreturn.setDate(null);
+    txtfine.setText("");
     }//GEN-LAST:event_rSMaterialButtonRectangle2ActionPerformed
 
     private void tblBorrowedBooksMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblBorrowedBooksMouseClicked

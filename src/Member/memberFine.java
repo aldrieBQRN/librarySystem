@@ -10,10 +10,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -412,6 +408,8 @@ try {
     txtbid.setText("");
     txtdays.setText("");
     txttotal.setText("");
+    txtpay.setText("");   
+    txtchange.setText("");   
         
     } else {
         JOptionPane.showMessageDialog(null, "No fine found with the given ID!", "Error", JOptionPane.ERROR_MESSAGE);
@@ -442,7 +440,12 @@ try {
     }//GEN-LAST:event_rSMaterialButtonRectangle1ActionPerformed
 
     private void rSMaterialButtonRectangle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle2ActionPerformed
-        // TODO add your handling code here:
+        txtfid.setText("");
+    txtbid.setText("");
+    txtdays.setText("");
+    txttotal.setText("");
+    txtpay.setText("");   
+    txtchange.setText("");   
     }//GEN-LAST:event_rSMaterialButtonRectangle2ActionPerformed
 
     private void finesTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finesTableMouseClicked
